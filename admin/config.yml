@@ -14,3 +14,15 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
+  - name: "articleList"
+    label: "Article List"
+    files:
+      - label: "Articles Index"
+        name: "articles_index"
+        file: "articles/index.json"
+        fields:
+          - { label: "Articles", name: "articles", widget: "list", fields: [
+              {label: "Title", name: "title", widget: "string"},
+              {label: "Slug", name: "slug", widget: "string"}
+            ]
+          }
