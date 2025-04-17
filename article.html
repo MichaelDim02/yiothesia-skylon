@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Article</title>
+</head>
+<body>
+  <h1>Article</h1>
+  <div id="article">Loading...</div>
+const params = new URLSearchParams(window.location.search);
+const articleName = params.get('name');
+
+if (articleName) {
+    fetch(`/articles/${articleName}.md`)
+      .then(response => {
+        if (!response.ok) throw new Error("Article not found");
+        return response.text();
+      })
+      .then(markdown => {
+        document.getElementById('article').innerText = markdown;
+      })
+      .catch(err => {
+        document.getElementById('article').innerText = "Error loading article.";
+      });
+}
+  <script>
+    // The JavaScript code from above goes here.
+  </script>
+</body>
+</html>
