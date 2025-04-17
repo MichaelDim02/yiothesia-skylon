@@ -7,6 +7,8 @@
 <body>
   <h1>Article</h1>
   <div id="article">Loading...</div>
+
+  <script>
 const params = new URLSearchParams(window.location.search);
 const articleName = params.get('name');
 
@@ -22,9 +24,6 @@ if (articleName) {
       .catch(err => {
         document.getElementById('article').innerText = "Error loading article.";
       });
-}
-  <script>
-    // The JavaScript code from above goes here.
-  </script>
+}  </script>
 </body>
 </html>
