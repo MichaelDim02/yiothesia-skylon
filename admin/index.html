@@ -1,20 +1,17 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <title>Content Manager</title>
-    <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="none">
+
+  <link rel="cms-config-url" href="/netlify-cms.config.yml" type="text/yaml">
+
+  <title>CORE Admin</title>
+
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
-    <!-- Netlify CMS Admin Container -->
-    <div id="nc-root"></div> <!-- This div will be replaced by the CMS app -->
-
-    <!-- Netlify CMS Initialization Script -->
-    <script>
-        // Initialize Netlify CMS
-        if (window.NetlifyCMS) {
-            window.NetlifyCMS.init();
-        }
-    </script>
+  <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
 </body>
 </html>
