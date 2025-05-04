@@ -1,0 +1,92 @@
+body {
+	background-image: url("https://static.vecteezy.com/system/resources/previews/008/291/070/non_2x/dog-bone-dog-paw-doodle-seamless-pattern-isolated-dark-brown-wallpaper-background-vector.jpg");
+	background-size: 200px 200px;
+	/*background-color: #781800;*/
+	background-attachment: fixed;
+	padding-top: 2em;
+	padding-bottom: 3em;
+}
+
+section {
+	/* background-color: #fff3ad; */
+	background: #f0e8b9;
+	font-size: 21px;
+	max-width: 47em;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: -10px;
+	color: #380b00;
+}
+
+hr {
+	display: none;
+}
+
+main {
+	padding-top: 0.5em;
+	padding-left: 1em;
+	padding-right: 1em;
+	padding-bottom: 1em;
+}
+
+#header {
+        color: #f0f8c9;
+	font-size: 5em;
+	text-shadow: 4px 4px black;
+}
+
+h1, h2 { text-align: center; color: #781800; }
+h1 { font-size: 45px; }
+
+.center {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 30%;
+}
+
+
+.topnav {
+	overflow: hidden;
+	font-weight: bold;
+	text-shadow: 2px 2px black;
+	background-color: #781800;
+}
+
+.topnav a {
+	float: left;
+	color: #f2f2f2;
+	text-align: center;
+	padding: 3px 13px;
+	text-decoration: none;
+	font-size: 22px;
+}
+
+.topnav a:hover {
+	background-image: linear-gradient(to bottom, #fff3ad, #f0e8b9);
+	background-color: #fff3ad;
+	text-decoration: none;
+  	text-shadow: 0px 0px;
+	color: black;
+}
+
+.topnav a.active {
+	background-color: #04AA6D;
+	color: white;
+}
+
+a { color: #1a357a; text-decoration: none; }
+a:hover { color: #030e2b; text-decoration: underline; }
+
+.button {
+	background: #f0e8b9;
+	color: #380b00;
+	border: 2px solid #781800;
+	transition-duration: 0.2s;
+	font-weight: bold;
+	cursor: pointer;
+	font-size: 19px;
+}
+
+.button:hover { background-color: #781800; color: white; }
+
