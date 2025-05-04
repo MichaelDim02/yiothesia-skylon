@@ -1,2 +1,6 @@
-# My First Article
-This is some article content.
+---
+title: Good doggos
+---
+This is some [article](mcdim.xyz) content.
+
+Doggos are *goooood.* They are **real** *good.*
