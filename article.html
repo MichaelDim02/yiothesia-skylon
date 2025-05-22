@@ -8,13 +8,13 @@
     <title>Decode GitHub File</title>
 </head>
 <body>
-    <h1 id="header">Υιοθεσία σκύλων</h1>
+    <a href="index.html" style="text-decoration: none;"><h1 id="header">Υιοθεσία σκύλων</h1></a>
     <section>
 	<div class="topnav" id="file-list">
         </div>
     <main>
 
-    <pre id="file-content" style="font-family: arial;">Loading...</pre>
+    <p id="file-content" style="font-family: arial;">Loading...</p>
     </main>
     </section>
 
@@ -80,7 +80,8 @@
                     if (data.content) {
                         // The file content is Base64-encoded
                         const base64Content = data.content;
-                        const decodedContent = atob(base64Content);  // Decode the Base64 content
+                        //const decodedContent = atob(base64Content);  // Decode the Base64 content
+			const decodedContent = new TextDecoder("utf-8").decode(Uint8Array.from(atob(base64Content), c => c.charCodeAt(0)));
 
 			const cont = decodedContent.replace(new RegExp("title: ", "g"), '');
 
