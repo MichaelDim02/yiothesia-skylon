@@ -16,6 +16,8 @@ section {
 	margin-right: auto;
 	padding-top: -10px;
 	color: #380b00;
+
+	width: 60%;
 }
 
 hr {
@@ -29,14 +31,14 @@ main {
 	padding-bottom: 1em;
 }
 
+h1, h2 { text-align: center; color: #781800; }
+h1 { font-size: 45px; }
+
 #header {
         color: #f0f8c9;
 	font-size: 5em;
 	text-shadow: 4px 4px black;
 }
-
-h1, h2 { text-align: center; color: #781800; }
-h1 { font-size: 45px; }
 
 .center {
 	display: block;
@@ -90,3 +92,11 @@ a:hover { color: #030e2b; text-decoration: underline; }
 
 .button:hover { background-color: #781800; color: white; }
 
+
+
+img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+} 
