@@ -5,16 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/2.1.0/showdown.min.js"></script>
     <link rel="stylesheet" href="style.css"/>
-    <title>Decode GitHub File</title>
+    <title>Σκύλος — Άνθρωπος</title>
 </head>
 <body>
-    <a href="index.html" style="text-decoration: none;"><h1 id="header">Υιοθεσία σκύλων</h1></a>
+    <a href="index.html" style="text-decoration: none;"><h1 id="header">Σκύλος — Άνθρωπος</h1></a>
     <section>
 	<div class="topnav" id="file-list">
         </div>
     <main>
 
     <p id="file-content" style="font-family: arial;">Loading...</p>
+    <footer style="padding-top: 2em"><hr/><small style="font-size: 15px"><span>ΓΕΛ Κορώνειας</span><span style="float: right"> Ιστοσελίδα: Αθανασιάδης Βαλάντης, Δημόπουλος Μιχαήλ</span></small></footer>
     </main>
     </section>
 
@@ -44,6 +45,13 @@
                 // Get the list of files and filter out only .md files
                 const mdFiles = data.filter(file => file.name.endsWith('.md'));
 
+		// move home page to the top of the list
+		const index = mdFiles.findIndex(file => file.name === 'αρχική.md');
+		if (index > -1) {
+			const [specialFile] = mdFiles.splice(index, 1);
+			mdFiles.unshift(specialFile);
+		}
+
                 // Get the file list container from the DOM
                 const fileList = document.getElementById('file-list');
 
@@ -72,7 +80,8 @@
         const outputElement = document.getElementById('output');
         if (name) {
             var converter = new showdown.Converter();
-            const apiUrl = `https://api.github.com/repos/MichaelDim02/yiothesia-skylon/contents/articles/${name}`;
+            const apiUrl = encodeURI(`https://api.github.com/repos/MichaelDim02/yiothesia-skylon/contents/articles/${name}`);
+	    console.log(apiUrl);
 
             fetch(apiUrl)
                 .then(response => response.json())
@@ -96,9 +105,6 @@
                     console.error('Error fetching file:', error);
                     document.getElementById('file-content').textContent = 'Error fetching content.';
                 });
-
-
-
         } else {
             outputElement.textContent = 'Name parameter not found in the URL.';
         }

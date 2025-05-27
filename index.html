@@ -5,15 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/2.1.0/showdown.min.js"></script>
     <link rel="stylesheet" href="style.css"/>
-    <title>Decode GitHub File</title>
+    <title>Σκύλος — Άνθρωπος</title>
 </head>
 <body>
-    <h1 id="header">Υιοθεσία σκύλων</h1>
+    <a href="index.html" style="text-decoration: none;"><h1 id="header">Σκύλος — Άνθρωπος</h1></a>
     <section>
 	<div class="topnav" id="file-list">
         </div>
     <main>
 	<p>Καλώσορίσατε στην ιστοσελίδα υιοθεσίας σκύλων του Λυκείου Κορώνειας.</p>
+	<p>Στην ιστοσελίδα θα βρείτε βοηθητικά άρθρα γραμμένα από τους ίδιους τους μαθητές, με σκοπό να σας ενημερώσουν για τη σωστή φροντίδα, εκπαίδευση και υιοθεσία των σκύλων.</p>
 
     </main>
     </section>
@@ -36,7 +37,6 @@
                 if (!response.ok) {
                     throw new Error(`Error fetching data: ${response.statusText}`);
                 }
-
 		
                 // Convert response to JSON
                 const data = await response.json();
