@@ -1,67 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/2.1.0/showdown.min.js"></script>
-    <link rel="stylesheet" href="style.css"/>
-    <title>Σκύλος — Άνθρωπος</title>
-</head>
-<body>
-    <a href="index.html" style="text-decoration: none;"><h1 id="header">Σκύλος — Άνθρωπος</h1></a>
-    <section>
-	<div class="topnav" id="file-list">
-        </div>
-    <main>
-	<p>Καλώσορίσατε στην ιστοσελίδα υιοθεσίας σκύλων του Λυκείου Κορώνειας.</p>
-	<p>Στην ιστοσελίδα θα βρείτε βοηθητικά άρθρα γραμμένα από τους ίδιους τους μαθητές, με σκοπό να σας ενημερώσουν για τη σωστή φροντίδα, εκπαίδευση και υιοθεσία των σκύλων.</p>
-
-    </main>
-    </section>
-
+  <head>
+    <meta charset="UTF-8" />
+    <title>Redirecting...</title>
     <script>
-        // GitHub API URL for the repository and folder you want to fetch
-        const apiUrl = 'https://api.github.com/repos/MichaelDim02/yiothesia-skylon/contents/articles';
-
-	function cleanString(input) {
-	    // Remove dashes and everything after the first period
-    	    return input.replace(/-/g, ' ').replace(/\..*$/, '');
-	}
-
-        // Function to fetch and display the files
-        async function fetchFiles() {
-            try {
-                // Fetch data from GitHub API
-                const response = await fetch(apiUrl);
-
-                if (!response.ok) {
-                    throw new Error(`Error fetching data: ${response.statusText}`);
-                }
-		
-                // Convert response to JSON
-                const data = await response.json();
-
-                // Get the list of files and filter out only .md files
-                const mdFiles = data.filter(file => file.name.endsWith('.md'));
-
-                // Get the file list container from the DOM
-                const fileList = document.getElementById('file-list');
-
-                // Loop through the files and display the name and path
-                mdFiles.forEach(file => {
-                    const listItem = document.createElement('div');
-                    listItem.innerHTML = `<a href="article.html?name=${file.name}">${cleanString(file.name)}</a>`;
-                    //fileList.appendChild(listItem);
-		    fileList.appendChild(listItem);
-                });
-            } catch (error) {
-                console.error(error);
-            }
-        }
-
-        // Call the fetchFiles function when the page loads
-        fetchFiles();
+      window.location.href = "https://skylos-/article.html?name=%CE%B1%CF%81%CF%87%CE%B9%CE%BA%CE%AE.md";
     </script>
-</body>
+  </head>
+  <body>
+    <p>If you are not redirected, <a href="https://skylos-/article.html?name=%CE%B1%CF%81%CF%87%CE%B9%CE%BA%CE%AE.md">click here</a>.</p>
+  </body>
 </html>
-
